@@ -1,9 +1,7 @@
 # Artificial Intelligence Programming Assignment 3  
 ## Constraint Satisfaction Problems (CSPs): Sudoku Solver
 
-ผู้พัฒนา: Phusit Lapet\
-github: T34Dr1nK\
-รหัสนักศึกษา: 65200276\
+รหัสนักศึกษา: 65200084\
 ภาควิชา: Computer Engineering
 
 ---
