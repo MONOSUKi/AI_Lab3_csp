@@ -99,61 +99,58 @@ CSP = (X, D, C)
 
 ```
 --- No MRV, No Inference ---
-Average Backtracks: 24.30
-Average Time: 0.0014 sec
+Average Backtracks: 143.90
+Average Time: 0.0048 sec
 
 --- MRV Only ---
-Average Backtracks: 63.90
-Average Time: 0.0027 sec
+Average Backtracks: 44.60
+Average Time: 0.0018 sec
 
 --- Inference Only ---
-Average Backtracks: 103.90
+Average Backtracks: 53.10
 Average Time: 0.0024 sec
 
 --- MRV + Inference ---
-Average Backtracks: 86.00
+Average Backtracks: 54.90
 Average Time: 0.0028 sec
-```
 
 ## 3.2 Medium Mode
 
 ```
 --- No MRV, No Inference ---
-Average Backtracks: 5.50
+Average Backtracks: 14.90
 Average Time: 0.0008 sec
 
 --- MRV Only ---
-Average Backtracks: 13.60
-Average Time: 0.0010 sec
+Average Backtracks: 13.40
+Average Time: 0.0012 sec
 
 --- Inference Only ---
-Average Backtracks: 5.70
+Average Backtracks: 16.70
 Average Time: 0.0006 sec
 
 --- MRV + Inference ---
-Average Backtracks: 7.80
-Average Time: 0.0008 sec
-```
+Average Backtracks: 12.70
+Average Time: 0.0010 sec
 
 ## 3.3 Easy Mode
 
 ```
 --- No MRV, No Inference ---
-Average Backtracks: 0.20
-Average Time: 0.0004 sec
+Average Backtracks: 0.10
+Average Time: 0.0002 sec
 
 --- MRV Only ---
-Average Backtracks: 0.40
-Average Time: 0.0004 sec
+Average Backtracks: 0.10
+Average Time: 0.0005 sec
 
 --- Inference Only ---
-Average Backtracks: 0.20
-Average Time: 0.0003 sec
+Average Backtracks: 0.10
+Average Time: 0.0004 sec
 
 --- MRV + Inference ---
-Average Backtracks: 0.40
-Average Time: 0.0004 sec
-```
+Average Backtracks: 0.10
+Average Time: 0.0006 sec
 
 ---
 
@@ -163,9 +160,9 @@ Average Time: 0.0004 sec
     * ปัญหามีข้อจำกัดเพียงพออยู่แล้ว
     * จำนวน Backtracks ต่ำมาก
     * Heuristic ไม่ได้ช่วยอย่างมีนัยสำคัญ
-2. ในระดับ Hard
-    * จำนวน Backtracks เพิ่มขึ้น
-    * ความแตกต่างระหว่างแต่ละเทคนิคเริ่มชัดเจนขึ้น
+2. ในระดับ Hard จะเห็นความแตกต่างชัดเจนที่สุด
+    * ลดจำนวน Backtracks อย่างมหาศาล: เมื่อใช้ MRV Only จำนวนการย้อนรอย (Backtracks) ลดลงจาก 143.90 เหลือเพียง 44.60 (ลดลงประมาณ 69%)
+    * ความเร็วเพิ่มขึ้น: เวลาเฉลี่ยลดลงจาก 0.0048 วินาที เหลือ 0.0018 วินาที ซึ่งสอดคล้องกับจำนวน Backtracks ที่น้อยลง ทำให้ Algorithm ไม่ต้องเสียเวลาสำรวจกิ่งก้าน (Branch) ที่ไม่นำไปสู่       คำตอบ
 3. จากผลลัพธ์ที่ได้
     * Heuristic ไม่ได้ลด Backtracks อย่างชัดเจนในทุกกรณี
     * อาจเกิดจาก Sudoku ที่สร้างขึ้นมีโครงสร้างที่ไม่ซับซ้อนมากพอ
